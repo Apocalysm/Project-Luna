@@ -9,5 +9,6 @@ public class WordAbility : Ability
     public override void Initialize(GameObject obj)
     {
         obj.GetComponent<BoxCollider>();
+        Debug.Log("hey");
     }
 }
