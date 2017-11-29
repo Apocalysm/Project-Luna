@@ -8,15 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 555a366d6fac0fe4aae21a51f7878e96, type: 3}
-  m_Name: Data
+  m_Script: {fileID: 11500000, guid: 2bb3adbec576a9d4eafd214f1e6b27c0, type: 3}
+  m_Name: New Word Ability
   m_EditorClassIdentifier: 
-  objectName: New MyScriptableObject
-  colorIsRandom: 0
-  thisColor:
-    r: 1
-    g: 0
-    b: 0
-    a: 1
-  spawnPoints:
-  - {x: 0, y: 0, z: 0}
+  objectName: 
+  coolDown: 0

@@ -8,7 +8,6 @@ public class PipeLineValue
 {
     [HideInInspector]
     public bool owned = false;
-    public float coolDown;
     public string quest;
     public KeyCode key;
 
@@ -29,5 +28,10 @@ public class PipelineAbility : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {	
+        if (Input.GetKeyDown(value[0].key))
+        {
+            value[0].ability.Initialize(gameObject);
+        }
+            
     }
 }
