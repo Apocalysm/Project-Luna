@@ -55,23 +55,25 @@ public class CamFollow : MonoBehaviour  // for putting scr directly on player ch
     public float zoom_speed = 3.0f;
     public float zoom_min = 0.5f;
     public float zoom_max = 2.0f;
-    public float smooth_speed = 7.0f;
+    public float smooth_speed = 5.0f;
     public float pitch = 2.0f;
 
 
     void Start()
     {
         cam_follow = Camera.main;
-        camera_offset = new Vector3(offset_x, offset_y, offset_z);
     }
 
     void Update()
     {
         zoom_current -= Input.GetAxis("Mouse ScrollWheel") * zoom_speed;
         zoom_current = Mathf.Clamp(zoom_current, zoom_min, zoom_max);
+
+        float zoom_dest = zoom_current;
+        float zoom_smooth = Mathf.Lerp(Input.GetAxis("Mouse ScrollWheel"), zoom_dest, 3 * Time.deltaTime);
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         Vector3 camera_dest = transform.position + new Vector3(offset_x, offset_y, offset_z) * zoom_current;
         Vector3 camera_smooth_to_pos = Vector3.Lerp(cam_follow.transform.position, camera_dest, smooth_speed * Time.deltaTime);
