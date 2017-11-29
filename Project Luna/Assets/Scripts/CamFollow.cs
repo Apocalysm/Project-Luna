@@ -43,25 +43,26 @@ using UnityEngine;
 
 public class CamFollow : MonoBehaviour  // for putting scr directly on player character
 {
-    //public Transform follow_target;
-    Camera cam_follow;
+    private Camera cam_follow;
 
-    public Vector3 camera_offset;
+    private Vector3 camera_offset;
 
+    public float offset_x = 0.0f;
+    public float offset_y = 7.0f;
+    public float offset_z = -7.0f;
 
     private float zoom_current = 1.0f;
     public float zoom_speed = 3.0f;
     public float zoom_min = 0.5f;
-    public float zoom_max = 3.0f;
-
-    public float smooth_speed = 0.15f;
-    public float yaw = 2.0f;
+    public float zoom_max = 2.0f;
+    public float smooth_speed = 7.0f;
+    public float pitch = 2.0f;
 
 
     void Start()
     {
         cam_follow = Camera.main;
-        camera_offset = new Vector3(0.0f, 7.0f, -7.0f);
+        camera_offset = new Vector3(offset_x, offset_y, offset_z);
     }
 
     void Update()
@@ -70,12 +71,12 @@ public class CamFollow : MonoBehaviour  // for putting scr directly on player ch
         zoom_current = Mathf.Clamp(zoom_current, zoom_min, zoom_max);
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
-        Vector3 camera_dest = transform.position + camera_offset * zoom_current;
-        Vector3 camera_smooth_to_pos = Vector3.Lerp(cam_follow.transform.position, camera_dest, smooth_speed);
+        Vector3 camera_dest = transform.position + new Vector3(offset_x, offset_y, offset_z) * zoom_current;
+        Vector3 camera_smooth_to_pos = Vector3.Lerp(cam_follow.transform.position, camera_dest, smooth_speed * Time.deltaTime);
         cam_follow.transform.position = camera_smooth_to_pos;
 
-        cam_follow.transform.LookAt(transform.position + Vector3.up * yaw);
+        cam_follow.transform.LookAt(transform.position + Vector3.up * pitch);
     }
 }
