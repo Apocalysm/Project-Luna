@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Quest : MonoBehaviour {
 
-    //private bool questDone = false;
+    protected bool questDone = false;
+    protected bool haveQuest = false;
+
 
 	// Use this for initialization
 	void Start ()
@@ -18,10 +20,16 @@ public class Quest : MonoBehaviour {
     {
 		
 	}
-
+    
+    //Return if the quest what the quest state is
     public bool QuestDone()
     {
-        return true;
-        //return questDone;
+
+        return questDone;
+    }
+
+    public virtual void QuestFunction()
+    {
+
     }
 }
