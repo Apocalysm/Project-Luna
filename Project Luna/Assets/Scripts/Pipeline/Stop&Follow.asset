@@ -15,3 +15,5 @@ MonoBehaviour:
   coolDown: 10
   animation: {fileID: 0}
   audio: {fileID: 0}
+  supplies: 30
+  canUse: 1

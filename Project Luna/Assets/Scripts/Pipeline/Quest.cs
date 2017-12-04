@@ -8,6 +8,7 @@ public class Quest : MonoBehaviour {
     protected bool questDone = false;
     protected bool haveQuest = false;
 
+    public delegate bool QuestStuff();
 
 	// Use this for initialization
 	void Start ()
@@ -24,12 +25,16 @@ public class Quest : MonoBehaviour {
     //Return if the quest what the quest state is
     public bool QuestDone()
     {
-
         return questDone;
     }
 
     public virtual void QuestFunction()
     {
+        
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        
     }
 }
