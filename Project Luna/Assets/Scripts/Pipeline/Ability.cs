@@ -11,9 +11,9 @@ public abstract class Ability : ScriptableObject
     public Animation animation;
     public AudioClip audio;
     public int supplies;
-    public enum abillityType {STOP = 0, };
     protected AudioSource source;
     [HideInInspector]
+    public bool owned = false;
     public bool canUse = true;
 
     public virtual void Initialize(GameObject obj)

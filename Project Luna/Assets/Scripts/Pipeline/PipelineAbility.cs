@@ -5,29 +5,26 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
+
+
+
 public class PipeLineValue 
 {
-    [HideInInspector]
-    public bool owned = false;
+
     public string questName;
     public KeyCode key;
     public Image abilitySprite;
-    public Image darkenabilitySprite;
+    public Image overlaySprite;
     public Ability ability;
-    public Button buyButton;
-
-    private Quest quest;
-    private GameObject questQiver;
     private float timer = 0;
-
 
     public void BuyAbility()
     {
         //Check if the player have enough supplies to buy the ability 
         if(ability.supplies >= 10)
         {
-            owned = true;
-            darkenabilitySprite.fillAmount = 0;
+            ability.owned = true;
+            overlaySprite.fillAmount = 0;
         }
     }
 
@@ -37,25 +34,29 @@ public class PipeLineValue
         {
             timer = 0;
             ability.canUse = true;
-            Debug.Log(ability.canUse);
         }
         else
         {
-            darkenabilitySprite.fillAmount -= 1.0f / ability.coolDown * Time.deltaTime;
+            overlaySprite.fillAmount -= 1.0f / ability.coolDown * Time.deltaTime;
             timer += Time.deltaTime;
-            Debug.Log(timer);
-            Debug.Log(ability.canUse);
         }
     } 
 }
 
 public class PipelineAbility : MonoBehaviour
 {
+    public enum Abilities { STOPFOLLOW = 0, HIDE = 1 }
     public PipeLineValue[] value;
 
     // Use this for initialization
-    void Start ()
+    void Awake ()
     {
+        for(int i = 0; i < value.Length; i ++)
+        {
+            value[i].ability.canUse = true;
+            if (value[i].ability.owned == true)
+                value[i].overlaySprite.fillAmount = 0;
+        }
         
     }
 
@@ -65,11 +66,11 @@ public class PipelineAbility : MonoBehaviour
         for (int i = 0; i< value.Length; i++)
         {
             //Check if the specific ability key is pressed
-            if (Input.GetKeyDown(value[i].key) && value[i].ability.canUse == true)
+            if (Input.GetKeyDown(value[i].key) && value[i].ability.canUse == true && value[i].ability.owned == true)
             {
                 //Use the specific ability
                 value[i].ability.Initialize(gameObject);
-                value[i].darkenabilitySprite.fillAmount = 1;
+                value[i].overlaySprite.fillAmount = 1;
             }
 
             if(value[i].ability.canUse == false)
@@ -77,8 +78,10 @@ public class PipelineAbility : MonoBehaviour
                 value[i].Update();
             }
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.RightShift))
-            value[0].BuyAbility();
+    public void BuyAbility(int index)
+    {
+        value[index].BuyAbility();
     }
 }
