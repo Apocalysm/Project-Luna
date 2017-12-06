@@ -10,22 +10,33 @@ using UnityEngine.UI;
 
 public class PipeLineValue 
 {
+    public enum TypeAbility { COMMAND = 0, PASSIVE = 1, DEFENCE = 2 };
 
-    public string questName;
+    public string abilityName;
+    public TypeAbility type;
     public KeyCode key;
     public Image abilitySprite;
     public Image overlaySprite;
     public Ability ability;
+    public Button button;
+    public Text abilityPrice;
     private float timer = 0;
 
     public void BuyAbility()
     {
+      
         //Check if the player have enough supplies to buy the ability 
         if(ability.supplies >= 10)
         {
             ability.owned = true;
             overlaySprite.fillAmount = 0;
         }
+    }
+
+   public void SetUpButton(Transform panel)
+    {
+        //button = Instantiate(Button) as GameObject;
+
     }
 
     public void Update()
@@ -45,19 +56,26 @@ public class PipeLineValue
 
 public class PipelineAbility : MonoBehaviour
 {
-    public enum Abilities { STOPFOLLOW = 0, HIDE = 1 }
+    public enum TypeAbility { COMMAND = 0, PASSIVE = 1, DEFENCE = 2 };
     public PipeLineValue[] value;
+    public Transform[] contentPanel;
+    public Button button;
 
     // Use this for initialization
-    void Awake ()
+    void Start ()
     {
         for(int i = 0; i < value.Length; i ++)
         {
             value[i].ability.canUse = true;
             if (value[i].ability.owned == true)
                 value[i].overlaySprite.fillAmount = 0;
+
+            int index = i;
+            value[i].ability.owned = false;
+           
         }
-        
+
+        AddButtons();
     }
 
     // Update is called once per frame
@@ -82,6 +100,24 @@ public class PipelineAbility : MonoBehaviour
 
     public void BuyAbility(int index)
     {
+        Debug.Log(index);
         value[index].BuyAbility();
+    }
+
+    private void AddButtons()
+    {
+        for(int i = 0; i < value.Length; i++)
+        {
+
+            //value[i].SetUpButton(contentPanel);
+            int index = i;
+            for (int j = 0; j < contentPanel.Length; j++)
+            {
+                if ((int)value[i].type == j)
+                    value[i].button = Instantiate(button, contentPanel[j]);
+            }
+
+            value[i].button.onClick.AddListener(() => BuyAbility(index));
+        }
     }
 }

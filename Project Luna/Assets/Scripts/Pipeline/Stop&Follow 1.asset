@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bb3adbec576a9d4eafd214f1e6b27c0, type: 3}
-  m_Name: Stop&Follow
+  m_Name: Stop&Follow 1
   m_EditorClassIdentifier: 
   objectName: StopAndFollow
   coolDown: 10
@@ -17,4 +17,4 @@ MonoBehaviour:
   audio: {fileID: 0}
   supplies: 30
   owned: 1
-  canUse: 0
+  canUse: 1
