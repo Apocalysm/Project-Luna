@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Tests/christest.unity
-=======
 - path: Assets/Scenes/Levels/Park Lvl 1.unity
->>>>>>> Level
   isLoaded: 1
   isActive: 1
