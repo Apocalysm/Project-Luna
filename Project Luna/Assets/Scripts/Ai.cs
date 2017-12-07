@@ -21,7 +21,7 @@ public class Ai : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        //if(Input.GetKeyDown(KeyCode.A))
             
         agent.SetDestination(goal.position);
 
