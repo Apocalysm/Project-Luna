@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d8a7816b0a6b56745ac3c851c6af7472
 folderAsset: yes
 timeCreated: 1511865854
+=======
+guid: f9ca040a6a02ef14bac384d77e6e7c02
+folderAsset: yes
+timeCreated: 1511870716
+>>>>>>> Christopher
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
