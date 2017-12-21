@@ -5,9 +5,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-
-
-
 public class PipeLineValue 
 {
     public enum TypeAbility { COMMAND = 0, PASSIVE = 1, DEFENCE = 2 };
@@ -82,6 +79,7 @@ public class PipelineAbility : MonoBehaviour
                 //Use the specific ability
                 value[i].ability.Initialize(gameObject);
                 value[i].overlaySprite.fillAmount = 1;
+                value[i].ability.animation.Play();
             }
 
             if(value[i].ability.canUse == false)

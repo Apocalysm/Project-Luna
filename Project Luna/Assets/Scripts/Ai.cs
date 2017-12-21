@@ -24,18 +24,37 @@ public class Ai : MonoBehaviour {
         //if(Input.GetKeyDown(KeyCode.A))
             
         agent.SetDestination(goal.position);
-
-
-		if(Vector3.Distance(transform.position, goal.position) < 1.0f)
+        if (!chase)
         {
-            if(goal == destinationPoints[currentGoal])
+            if (Vector3.Distance(transform.position, goal.position) < 1.0f)
             {
-                if (currentGoal == destinationPoints.Length - 1)
-                    currentGoal = 0;
-                else
-                    currentGoal++;
-                goal = destinationPoints[currentGoal];
+                if (goal == destinationPoints[currentGoal])
+                {
+                    if (currentGoal == destinationPoints.Length - 1)
+                        currentGoal = 0;
+                    else
+                        currentGoal++;
+                    goal = destinationPoints[currentGoal];
+                }
             }
         }
 	}
+
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            goal = other.gameObject.transform;
+            chase = true;
+            Debug.Log("Hey");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+            chase = true;
+    }
 }
