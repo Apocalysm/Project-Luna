@@ -83,6 +83,12 @@ ModelImporter:
     100150: transform136
     100152: transform99
     100154: //RootNode
+    100156: polySurface108
+    100158: transform137
+    100160: transform138
+    100162: WallpostRail:polySurface58
+    100164: WallpostRail:polySurface61
+    100166: WallpostRail:transform101
     400000: pCylinder46
     400002: polySurface105
     400004: polySurface106
@@ -161,9 +167,19 @@ ModelImporter:
     400150: transform136
     400152: transform99
     400154: //RootNode
+    400156: polySurface108
+    400158: transform137
+    400160: transform138
+    400162: WallpostRail:polySurface58
+    400164: WallpostRail:polySurface61
+    400166: WallpostRail:transform101
+    2100000: WallpostRail_lambert3
     2300000: polySurface62
+    2300002: polySurface108
     3300000: polySurface62
+    3300002: polySurface108
     4300000: polySurface62
+    4300002: polySurface108
     9500000: //RootNode
   externalObjects:
   - first:
