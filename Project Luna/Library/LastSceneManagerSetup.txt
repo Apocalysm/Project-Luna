@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Tests/ChristestWoods.unity
+- path: Assets/Scenes/Tests/WoodLands.unity
   isLoaded: 1
   isActive: 1
