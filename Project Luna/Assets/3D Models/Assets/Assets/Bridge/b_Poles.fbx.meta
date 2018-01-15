@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 849b18b20e7d46547acd6b713e496a7b
+guid: 51e8d1b04ea14a045acf99886920af1e
 timeCreated: 1515766468
 licenseType: Free
 ModelImporter:
@@ -7,82 +7,39 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: pCube53
-    100004: polySurface1
-    100006: polySurface1 1
-    100008: polySurface10
-    100010: polySurface11
-    100012: polySurface12
-    100014: polySurface13
-    100016: polySurface14
-    100018: polySurface15
-    100020: polySurface2
-    100022: polySurface3
-    100024: polySurface4
-    100026: polySurface5
-    100028: polySurface6
-    100030: polySurface7
-    100032: polySurface8
-    100034: polySurface9
-    100036: transform1
-    100038: transform10
-    100040: transform11
-    100042: transform12
-    100044: transform13
-    100046: transform14
-    100048: transform15
-    100050: transform16
-    100052: transform2
-    100054: transform3
-    100056: transform4
-    100058: transform5
-    100060: transform6
-    100062: transform7
-    100064: transform8
-    100066: transform9
+    100004: polySurface18
+    100006: polySurface19
+    100008: polySurface20
+    100010: polySurface21
+    100012: polySurface21 1
+    100014: transform1
+    100016: transform19
+    100018: transform20
+    100020: transform21
+    100022: transform22
     400000: //RootNode
     400002: pCube53
-    400004: polySurface1
-    400006: polySurface1 1
-    400008: polySurface10
-    400010: polySurface11
-    400012: polySurface12
-    400014: polySurface13
-    400016: polySurface14
-    400018: polySurface15
-    400020: polySurface2
-    400022: polySurface3
-    400024: polySurface4
-    400026: polySurface5
-    400028: polySurface6
-    400030: polySurface7
-    400032: polySurface8
-    400034: polySurface9
-    400036: transform1
-    400038: transform10
-    400040: transform11
-    400042: transform12
-    400044: transform13
-    400046: transform14
-    400048: transform15
-    400050: transform16
-    400052: transform2
-    400054: transform3
-    400056: transform4
-    400058: transform5
-    400060: transform6
-    400062: transform7
-    400064: transform8
-    400066: transform9
-    2300000: polySurface1
-    3300000: polySurface1
-    4300000: polySurface1
+    400004: polySurface18
+    400006: polySurface19
+    400008: polySurface20
+    400010: polySurface21
+    400012: polySurface21 1
+    400014: transform1
+    400016: transform19
+    400018: transform20
+    400020: transform21
+    400022: transform22
+    2300000: polySurface21
+    3300000: polySurface21
+    4300000: polySurface21
+    6400000: polySurface21
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert1
-    second: {fileID: 2100000, guid: 8ce389b24c9fd364fa00353b1aaa2c5c, type: 2}
+    second: {fileID: 2100000, guid: 1e043a4db008df444926793e465b1a06, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -114,7 +71,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
