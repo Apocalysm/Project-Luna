@@ -8,13 +8,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb3adbec576a9d4eafd214f1e6b27c0, type: 3}
-  m_Name: New Word Ability 2
-  m_EditorClassIdentifier: 
-  objectName: New Ability
-  coolDown: 10
+  m_Script: {fileID: 0}
+  m_Name: SilentMove
+  m_EditorClassIdentifier: Assembly-CSharp::SilentMove
+  objectName: SilentMove
+  coolDown: 0
   animation: {fileID: 0}
   audio: {fileID: 0}
-  supplies: 1000
+  supplies: 20
   owned: 1
-  canUse: 1
+  canUse: 0
+  haveUpdate: 0
+  passive: 1

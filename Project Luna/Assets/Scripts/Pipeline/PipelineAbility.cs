@@ -51,6 +51,7 @@ public class PipeLineValue
 public class PipelineAbility : MonoBehaviour
 {
     public PipeLineValue[] value;
+    public GameObject luna;
     public Transform[] contentPanel;
     public Button button;
 
@@ -59,13 +60,15 @@ public class PipelineAbility : MonoBehaviour
     {
         for(int i = 0; i < value.Length; i ++)
         {
-            value[i].ability.canUse = true;
+            //value[i].ability.canUse = true;
             //Check if player ownes the ability
             if (value[i].ability.owned == true)
                 value[i].overlaySprite.fillAmount = 0;       
         }
 
         AddButtons();
+
+        luna = GameObject.FindGameObjectWithTag("Luna");
     }
 
     // Update is called once per frame
@@ -77,12 +80,12 @@ public class PipelineAbility : MonoBehaviour
             if (Input.GetKeyDown(value[i].key) && value[i].ability.canUse == true && value[i].ability.owned == true)
             {
                 //Use the specific ability
-                value[i].ability.Initialize(gameObject);
+                value[i].ability.Initialize(luna,gameObject);
                 value[i].overlaySprite.fillAmount = 1;
-                value[i].ability.animation.Play();
+                //value[i].ability.animation.Play();
             }
 
-            if(value[i].ability.canUse == false)
+            if(value[i].ability.canUse == false && !value[i].ability.passive)
             {
                 value[i].Update();
             }

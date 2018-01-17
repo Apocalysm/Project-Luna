@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Detection : MonoBehaviour
 {
-    Collider collider;
+    public Collider collider;
+    public Vector3 pos;
 
 	// Use this for initialization
 	void Start ()
@@ -19,5 +20,10 @@ public class Detection : MonoBehaviour
         {
             collider.enabled = !collider.enabled;
         }
-	}
+
+        if(collider.enabled)
+        {
+            pos = transform.position;
+        }
+    }
 }

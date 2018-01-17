@@ -18,3 +18,6 @@ MonoBehaviour:
   supplies: 30
   owned: 1
   canUse: 0
+  haveUpdate: 1
+  passive: 0
+  luna: {fileID: 1514612661384436, guid: ef692a047bec157428d77ee63aca28e2, type: 2}
