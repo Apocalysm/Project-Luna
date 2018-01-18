@@ -51,6 +51,7 @@ public class PipeLineValue
 public class PipelineAbility : MonoBehaviour
 {
     public PipeLineValue[] value;
+    [HideInInspector]
     public GameObject luna;
     public Transform[] contentPanel;
     public Button button;

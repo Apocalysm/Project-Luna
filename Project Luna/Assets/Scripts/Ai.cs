@@ -7,13 +7,15 @@ public class Ai : MonoBehaviour {
 
     private NavMeshAgent agent;
     public Transform[] destinationPoints;
-    private Vector3 goal;
+    [HideInInspector]
+    public Vector3 goal;
     private int currentGoal = 0;
     private bool chase = false;
     private bool moving = true;
     private float timer = 0;
     public float cd = 15;
-    private Detection playerDetection;
+    [HideInInspector]
+    public Detection playerDetection;
     private float lookDegrees = 0;
     private bool gate = true;
 
@@ -27,7 +29,7 @@ public class Ai : MonoBehaviour {
 	}
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         //if(Input.GetKeyDown(KeyCode.A))
 
@@ -64,6 +66,7 @@ public class Ai : MonoBehaviour {
                 }
             }
         }
+    
 
         else if (chase)
         {
@@ -92,7 +95,7 @@ public class Ai : MonoBehaviour {
     }
 
 
-    IEnumerator CoolDown()
+    public IEnumerator CoolDown()
     {
         if (gameObject.GetComponent<NavMeshAgent>().speed >= 6)
             gameObject.GetComponent<NavMeshAgent>().speed = 3.5f;

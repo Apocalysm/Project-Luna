@@ -15,8 +15,8 @@ MonoBehaviour:
   coolDown: 0
   animation: {fileID: 0}
   audio: {fileID: 0}
-  supplies: 20
-  owned: 1
-  canUse: 0
+  supplies: 0
+  owned: 0
+  canUse: 1
   haveUpdate: 0
   passive: 1
