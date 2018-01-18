@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 1df94eab95cdff542a1d8bd50e9e7d78
 folderAsset: yes
 timeCreated: 1513428672
+=======
+guid: 7b3410e9b13e0594aafd2a64ce6e2370
+folderAsset: yes
+timeCreated: 1512118767
+>>>>>>> Pipeline
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
