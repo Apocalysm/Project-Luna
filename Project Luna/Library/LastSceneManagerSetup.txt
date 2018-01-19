@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Levels/LvlTest.unity
+- path: Assets/Scenes/Tests/RasmusTest.unity
   isLoaded: 1
   isActive: 1
