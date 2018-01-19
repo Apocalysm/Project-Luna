@@ -4,11 +4,10 @@ using System.Collections;
 public class FindNPC : MonoBehaviour {
     public Dialogue dialogue;
 
-    void update () {
+    void Update () {
         RaycastHit hit;
         float Distance;
         GameObject.FindWithTag("NPC");
- 
 
         //Debug raycast
          Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
