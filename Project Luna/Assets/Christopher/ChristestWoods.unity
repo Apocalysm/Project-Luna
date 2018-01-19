@@ -21941,8 +21941,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 803273705}
-  m_LocalRotation: {x: -0.041159235, y: 0.95774984, z: 0.17647131, w: 0.22333623}
-  m_LocalPosition: {x: 231.35965, y: 85.22829, z: 428.61884}
+  m_LocalRotation: {x: -0.036637913, y: 0.0612181, z: 0.002240561, w: 0.9974493}
+  m_LocalPosition: {x: 162.22742, y: 17.31752, z: 91.25415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -24341,6 +24341,14 @@ Prefab:
     - target: {fileID: 400010, guid: e16ebd76d5ceffd4ea77091388330041, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 189.467
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: e16ebd76d5ceffd4ea77091388330041, type: 2}
+      propertyPath: m_AnimatePhysics
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: e16ebd76d5ceffd4ea77091388330041, type: 2}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e16ebd76d5ceffd4ea77091388330041, type: 2}
@@ -35446,6 +35454,19 @@ MonoBehaviour:
     - This
     - Is
     - Working
+--- !u!136 &1315005352
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1315005350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.09
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.54, z: 0}
 --- !u!4 &1315005353 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400010, guid: e16ebd76d5ceffd4ea77091388330041, type: 2}
@@ -38744,6 +38765,49 @@ Transform:
   m_Father: {fileID: 951489770}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1455934635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1455934636}
+  - component: {fileID: 1455934637}
+  m_Layer: 0
+  m_Name: FindNPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1455934636
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1455934635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1771879321}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455934637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1455934635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b7734f378096145b796794dccfd1c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
 --- !u!1001 &1457848086
 Prefab:
   m_ObjectHideFlags: 0
@@ -39174,9 +39238,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Farmer
-
-'
+  m_Text: 
 --- !u!222 &1466605240
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47702,9 +47764,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1771879320}
   m_LocalRotation: {x: -0, y: 0.9965897, z: -0, w: -0.08251694}
-  m_LocalPosition: {x: 241.42, y: 100.28, z: 412.11}
+  m_LocalPosition: {x: 232.27, y: 102.88, z: 407.72}
   m_LocalScale: {x: 3.7600262, y: 3.7600222, z: 3.7600255}
-  m_Children: []
+  m_Children:
+  - {fileID: 1455934636}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
