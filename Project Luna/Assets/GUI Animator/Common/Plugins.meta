@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 53e777f771dee254d8bbd1f3ddc01285
 folderAsset: yes
 DefaultImporter:
   userData: 
+=======
+guid: 845333448cf2d38409de3323941862cd
+folderAsset: yes
+timeCreated: 1516283225
+licenseType: Free
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> Pipeline
