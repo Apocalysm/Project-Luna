@@ -1,25 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FindNPC : MonoBehaviour {
-    public Dialogue dialogue;
+public class FindNPC : MonoBehaviour
+{
+    private Dialogue dialogue;
+    private DialogueManager dialoguemanager;
+    private DialogueTrigger dialoguetrigger;
 
-    void Update () {
-        RaycastHit hit;
-        float Distance;
-        GameObject.FindWithTag("NPC");
-
-        //Debug raycast
-         Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
-         Debug.DrawRay(transform.position, forward, Color.green);
-
-        if(Physics.Raycast(transform.position, (forward), out hit)){
-            Distance = hit.distance;
-            print(Distance + " " + hit.collider.gameObject.tag);
+    void OnCollisionEnter (Collision other)
+    {
+        GameObject.FindGameObjectWithTag("NPC");
+        if (dialoguemanager.dialoguename == Farmer) 
+        {
+            
         }
-            if(gameObject.tag == "NPC" & hit.distance < 1)
-            {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        }
-        }
+    }
 }
+
+       
