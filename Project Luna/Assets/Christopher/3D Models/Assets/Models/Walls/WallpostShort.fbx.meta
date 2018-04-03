@@ -422,7 +422,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: anisotropic1
-    second: {fileID: 2100000, guid: 2ef39672699d311479da48f53d145e45, type: 2}
+    second: {fileID: 2100000, guid: a42b72785121adf4db0088e54ecfd1fe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -432,17 +432,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert2
-    second: {fileID: 2100000, guid: 00d0b27e12287b940b0568d88d8e5552, type: 2}
+    second: {fileID: 2100000, guid: 7ea20e30e516aa74bbba18432c7accf2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert3
-    second: {fileID: 2100000, guid: 2aebecfc809e5174183c3e09128e5c62, type: 2}
+    second: {fileID: 2100000, guid: aef85ca9b3991af43989a27b50bee13c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert4
-    second: {fileID: 2100000, guid: 694dc79682aea4e4e95381a65d893974, type: 2}
+    second: {fileID: 2100000, guid: aef85ca9b3991af43989a27b50bee13c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

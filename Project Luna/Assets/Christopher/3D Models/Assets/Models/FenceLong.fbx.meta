@@ -58,7 +58,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: anisotropic1
-    second: {fileID: 2100000, guid: ec8687159da969a4d9a8ec9d2a17e06c, type: 2}
+    second: {fileID: 2100000, guid: 8ce389b24c9fd364fa00353b1aaa2c5c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
